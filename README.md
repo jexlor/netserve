@@ -9,7 +9,7 @@ git clone https://github.com/jexlor/netserve.git
 First step.
 ----------------------------
 ```bash
-cd Godoc
+cd netserve
 ```
 ```bash
 open main.go
