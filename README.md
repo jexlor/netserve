@@ -1,6 +1,6 @@
 ## Netserve 🪄
 
-Getting started with Godoc.
+Getting started with Netserve.
 ----------------------------
 ```bash
 git clone https://github.com/jexlor/netserve.git
