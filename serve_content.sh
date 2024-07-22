@@ -1,5 +1,27 @@
 #!/bin/bash
 
+# ANSI color code for orange (color 208 in 256-color mode)
+ORANGE='\033[38;5;208m'
+# ANSI color code to reset color
+NC='\033[0m' 
+
+printf "${ORANGE}                )\n"
+printf "         (   ( /(       (   (     )      (   \n"
+printf "   (      ))\  )\())(    ))\  )(   /((    ))\\ \n"
+printf "   )\ )  /((_)(_))/ )\  /((_)(()\ (_))\  /((_) \n"
+printf "  _(_/( (_))  | |_ ((_)(_))   ((_)_)((_)(_))   \n"
+printf " | ' \))/ -_) |  _|(_-</ -_) | '_|\ V / / -_)  \n"
+printf " |_||_| \___|  \__|/__/\___| |_|   \_/  \___|  \n"
+printf "                 )              )\n"
+printf "               ( /(           ( /( \n"
+printf "               )\\())  (   (   )\\()) \n"
+printf "              ((_)\   )\\  )\\ (_))/ \n"
+printf "              | |(_) ((_)((_)| |_ \n"
+printf "              | ' \|/ _ \\(_-<|  _| \n"
+printf "              |_||_|\\___//__/ \\__| \n"
+printf "${NC}"
+
+
 # Function to list directories
 list_directories() {
     echo "Which directory do you want to host?:"
