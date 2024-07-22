@@ -77,6 +77,8 @@ func extractResources(html string) []string {
 	return resources
 }
 
+var issues int
+
 func downloadPage(baseURL, outputDir, pageURL string) error {
 	pagePath := filepath.Join(outputDir, pageURL)
 	os.MkdirAll(filepath.Dir(pagePath), os.ModePerm)
@@ -96,6 +98,7 @@ func downloadPage(baseURL, outputDir, pageURL string) error {
 		err = downloadResource(baseURL, resource, outputDir)
 		if err != nil {
 			fmt.Printf("Failed to download resource %s: %v\n", resource, err)
+			issues += 1
 		}
 	}
 
@@ -115,7 +118,10 @@ func main() {
 		  `
 
 	fmt.Println(colorado.Color(text, colorado.Red, ""))
-	urlStr := "example.com" //enter here site you want to download
+	var userUrl string
+	fmt.Print(colorado.Color("Enter url: ", colorado.Blue, ""))
+	fmt.Scan(&userUrl)
+	urlStr := userUrl
 	baseURL, err := url.Parse(urlStr)
 	if err != nil {
 		fmt.Println("Invalid URL:", err)
@@ -129,8 +135,14 @@ func main() {
 
 	err = downloadPage(baseURL.String(), outputDir, "index.html")
 	if err != nil {
-		fmt.Printf("Error downloading index page: %v\n", err)
+		fmt.Println(colorado.Color("Can't access that...", colorado.Red, ""))
 		return
 	}
-	fmt.Println(colorado.Color("Content downloaded successfully! Run 'serve_content.sh' to host it.", colorado.Blue, ""))
+	fmt.Println(colorado.Color("Content downloaded successfully! Run 'serve_content.sh' to host it.", colorado.Cyan, ""))
+
+	if issues > 0 {
+		fmt.Print(colorado.Color("Missing ", colorado.Red, ""))
+		fmt.Print(issues)
+		fmt.Print(colorado.Color(" resource", colorado.Red, ""))
+	}
 }
