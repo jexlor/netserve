@@ -18,6 +18,7 @@ go run main.go
 ```
 Enter destination url:
 ---------------------------
+![Screenshot from 2024-07-21 18-08-17](https://github.com/user-attachments/assets/5c857cce-51b8-48bf-b842-e5b85f451eaa)
 
 Serve content.
 ---------------------------
