@@ -29,5 +29,5 @@ bash serve_content.sh
 <strong>Netserve</strong> is mostly used for E-books and such static sites which can work without internet. You can download some books and then access it anytime in your localhost even if you are offline.
 You don't have to worry about site structure as <strong>Netserve</strong> will do it for you.
 
-<strong>Note!</strong> Script will only run if you have Go 1.22.0 installed (or newer version).
+<strong>Note!</strong> Script will only run if you have Go 1.22.0 installed (or newer version) & Python for http server.
 The script itself is only supported for Linux for now.
