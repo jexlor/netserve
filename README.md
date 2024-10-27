@@ -30,4 +30,4 @@ bash serve_content.sh
 You don't have to worry about site structure as <strong>Netserve</strong> will do it for you.
 
 <strong>Note!</strong> Script will only run if you have Go 1.22.0 installed (or newer version).
-The script itself is only supported for unix like platforms for now.
+The script itself is only supported for Linux for now.
